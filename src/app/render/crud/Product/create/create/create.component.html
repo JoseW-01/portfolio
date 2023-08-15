@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <h4 class="mb-7">Create Product</h4>
+        <div class="col-4">
+            <div class="card">
+                <form (ngSubmit)="submit()" name="formulario" ngNativeValidate class="card-body">
+                    <div class="form-group p-2">
+                        <label class="form-label" for="name">Name</label>
+                        <input [(ngModel)]="newProduct.name" type="text" autofocus name="name" required  maxlength="25"
+                            min="3" class="form-control" name="name" id="name" (change)="doubleValidation()">
+                            <div class="form-text text-danger">{{errorMessages.name}}</div>
+                    </div>
+                    <div class="form-group p-2">
+                        <label class="form-label" for="description">Description</label>
+                        <textarea [(ngModel)]="newProduct.description"  rows="2" type="text" id="description" name="description" required  
+                            class="form-control" name="description" ></textarea>
+                            <div class="form-text text-danger">{{errorMessages.description}}</div>
+                    </div>
+                    <div class="form-group px-2">
+                        <label class="form-label" for="price">Price</label>
+                        <input [(ngModel)]="newProduct.price" type="number" name="price" required  
+                            class="form-control" name="price">
+                            <div class="form-text text-danger">{{errorMessages.price}}</div>
+                    </div>
+                    <div class="form-group my-3">
+                        <button  (click)="goToProductList()" class="btn btn-outline-danger me-3">Cancel</button>
+                        <button  class="btn btn-outline-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

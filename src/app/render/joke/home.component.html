@@ -1,0 +1,51 @@
+<body>
+    <section class="vh-100 gradient-custom" >
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col col-xl-7 align-items-center">
+                    <div class="card text-center" *ngIf='joke != null' >
+                        <div class="card-body py-5">
+                            <div id="carouselFade" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="col-md-6 col-lg-9 col-xl-8">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0">
+                                                    <img src="https://e7.pngegg.com/pngimages/654/401/png-clipart-word-academy-answers-for-word-academy-4-pics-1-word-android-video-game-chuck-norris-celebrities-hat.png"
+                                                        class="rounded-circle mb-4 mb-lg-0 shadow-2" alt="Chuck avatar"
+                                                        width="150" height="180">
+                                                </div>
+                                                <div class="flex-grow-1 ms-4 ps-3">
+                                                    <figure>
+                                                        <blockquote class="blockquote mb-4">
+                                                            <p>
+                                                                <i
+                                                                    class="fas fa-quote-left fa-lg text-warning me-2"></i>
+                                                                <span class="font-italic">{{joke.value}}</span>
+                                                            </p>
+                                                        </blockquote>
+                                                        <figcaption class="blockquote-footer">Chuck Norris
+                                                           <cite title="Source Title">The
+                                                                Guardian</cite>
+                                                        </figcaption>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div>
+                        <button (click)="getRamdonJoke()" type="button" class="btn btn-outline-light">Get Another</button>
+                        <button routerLink="" type="button" class="btn btn-outline-light">Go Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
