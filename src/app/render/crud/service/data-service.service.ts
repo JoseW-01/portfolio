@@ -11,7 +11,7 @@ export class DataServiceService {
   constructor() { }
 
   apiClient = inject(HttpClient);
-    baseUrl = "http://localhost:5107";
+    baseUrl = "https://product-manager-123.azurewebsites.net";
 
 
     getList(){
